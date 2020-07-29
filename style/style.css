@@ -101,7 +101,7 @@ ul {
 }
 
 .movie_box {
-    max-width: 960px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -122,8 +122,9 @@ ul {
 }
 
 .upper_footer {
+    z-index: 2;
     height: 30px;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-top: 32px;
     display: flex;
@@ -221,7 +222,7 @@ ul {
 }
 
 .lower_footer {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
