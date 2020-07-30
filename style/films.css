@@ -21,7 +21,6 @@ ul {
 .header {
     padding-top: 22px;
     height: 675px;
-    background-image: url(../images/banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -207,7 +206,6 @@ ul {
     background-size: cover;
     border-radius: 4px;
     position: relative;
-    background-image: url(https://a.ltrbxd.com/resized/film-poster/5/0/9/6/9/9/509699-da-5-bloods-0-460-0-690-crop.jpg?k=9431458c39);
 }
 
 .content_banner__followers {
@@ -340,6 +338,7 @@ ul {
     border-radius: 2px;
     margin-left: 5px;
     margin-right: 5px;
+    padding: 1px 3px;
 }
 
 .content_trailer__item4 {
@@ -377,7 +376,8 @@ ul {
 
 .description_title {
     display: flex;
-    width: 490px;
+    max-width: 490px;
+    position: relative;
 }
 
 .description_title span {
@@ -398,6 +398,9 @@ ul {
 .directed {
     margin-top: 13px;
     font-size: 1.1rem;
+    position: absolute;
+    top: 0px;
+    right: -277px;
 }
 
 .description_title h1 {
@@ -418,12 +421,12 @@ ul {
 .description_text p {
     font-size: 1.1rem;
     font-family: serif;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.6rem;
 }
 
 .description_text h1 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 0.09rem;
     font-weight: 400;
 }
@@ -637,6 +640,10 @@ ul {
 
 .rating_pillar li:last-child {
     margin-right: 5px;
+}
+
+.rating_pillar li:first-child {
+    margin-left: 5px;
 }
 
 .rating_pillar li:hover {
