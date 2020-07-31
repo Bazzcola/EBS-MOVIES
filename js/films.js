@@ -1,13 +1,12 @@
 const movieItem = async () => {
-    let pageUrl = $(location).attr("href");
-    const movieId = pageUrl.substr(-6);
+    const key = window.location.search;
+    const movieId = key.substr(1);
     const itemMovie = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=ad2fb2e9ab12851bd813fca1a20c373e&language=en-US`);
     return itemMovie.data;
 }
 const searchWindow = (event) => {
     event.preventDefault();
     const x = $("#search").val();
-    console.log(x)
     window.location.replace(`/search.html?${x}`)
 };
 $(document).ready(async () => {

@@ -16,8 +16,7 @@ ul {
 }
 
 .container {
-  background: #14181c
-    url(https://s.ltrbxd.com/static/img/content-bg.b4f2e697.png) 0 -1px repeat-x;
+  background: #14181c url(https://s.ltrbxd.com/static/img/content-bg.b4f2e697.png) 0 -1px repeat-x;
   height: 100vh;
 }
 
@@ -193,9 +192,10 @@ ul {
   list-style: none;
 }
 
-.pages li + li {
+.pages li+li {
   margin-left: 18px;
 }
+
 .pages a {
   color: #9ab;
   text-decoration: none;
@@ -289,4 +289,12 @@ ul {
 
 .description a:hover {
   color: #bce;
+}
+
+.review_title {
+  color: white;
+}
+
+.stars span {
+  color: #00C030;
 }

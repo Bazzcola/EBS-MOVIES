@@ -7,10 +7,11 @@ const searchWindow = (event) => {
     event.preventDefault();
     const x = $("#search").val();
     window.location.replace(`/search.html?${x}`)
+
 };
 $(document).ready(async () => {
     const movieList = await Movies();
-    console.log(movieList);
+    // console.log(movieList);
 
     await movieList.map((item) => {
         $('.movie_box').append(`
