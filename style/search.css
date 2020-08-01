@@ -4,6 +4,7 @@ body {
   padding: 0px;
   box-sizing: border-box;
   font-size: 1rem;
+  height: 100%;
 }
 
 h1,
@@ -17,7 +18,7 @@ ul {
 
 .container {
   background: #14181c url(https://s.ltrbxd.com/static/img/content-bg.b4f2e697.png) 0 -1px repeat-x;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header {
@@ -102,7 +103,7 @@ ul {
 }
 
 .content_leftside {
-  width: 750px;
+  width: 700px;
 }
 
 .result_title {
@@ -280,21 +281,76 @@ ul {
 
 .description {
   font-size: 0.82rem;
-  color: #9ab;
+  color: #678;
 }
 
-.description a {
-  color: #9ab;
-}
-
-.description a:hover {
-  color: #bce;
+.description p {
+  color: #9ab
 }
 
 .review_title {
   color: white;
 }
 
+.review_title a {
+  font-size: 1.7rem;
+  font-family: serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.review_title a:hover {
+  color: #40bcf4;
+}
+
+.review_title span {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #89a;
+  cursor: pointer;
+}
+
+.review_title span:hover {
+  color: #40bcf4;
+}
+
 .stars span {
   color: #00C030;
+}
+
+.search_item {
+  padding-left: 100px;
+  padding-bottom: 47px;
+  margin: 50px 0px;
+  position: relative;
+  border-bottom: 1px solid #2c3440;
+}
+
+.search_item img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 76px;
+  height: 111px;
+  border-radius: 3px;
+  border: 1px solid white;
+  color: white;
+}
+
+.description a {
+  color: #678;
+}
+
+.description a:hover {
+  color: #9ab;
+}
+
+.likes {
+  margin-top: 40px;
+  color: white;
 }

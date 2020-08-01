@@ -1,41 +1,54 @@
 const searchWindow = async (event) => {
     event.preventDefault();
     const x = $("#search").val();
-    let search = window.location.search;
-    let clearURI = decodeURI(search)
-    const clear = clearURI.substr(1);
-    sessionStorage.setItem('search', clear);
+    // let search = window.location.search;
+    // let clearURI = decodeURI(search)
+    // const clear = clearURI.substr(1);
+    // sessionStorage.clear()
+    // sessionStorage.setItem('search', clear);
     window.location.replace(`/search.html?${x}`);
 
 };
 
 
 $(document).ready(async () => {
-    let clear = sessionStorage.getItem('search');
+    const x = $("#search").val();
+    let search = window.location.search;
+    let clearURI = decodeURI(search)
+    const clear = clearURI.substr(1);
     const itemMovie = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${clear}&api_key=ad2fb2e9ab12851bd813fca1a20c373e&language=en-US&page=1&include_adult=false&page=1`);
     let item = itemMovie.data.results
     console.log(item)
-    $('.search_item_box').append(`
-        <div class="search_item">
-            <img src="https://a.ltrbxd.com/resized/film-poster/4/5/9/5/6/4/459564-midsommar-0-70-0-105-crop.jpg?k=e7f0ad4e39"
-                alt="">
-            <div class="review">
-                <div class="review_title">
-                    <h1>Midsommar</h1>
-                    <p>2019</p>
-                </div>
-                <div class="stars">
-                    <span>★★★★★</span>
-                </div>
-                <div class="description">
-                    <p>This review may contain spoilers.</p>
-                    <a href="#">I can handle the truth.</a>
-                </div>
-                <div class="likes">
-                    <img src="" alt="">
-                    <p>1 like</p>
+    await item.map((data) => {
+        $('.search_item_box').append(`
+            <div class="search_item">
+                <img src="https://image.tmdb.org/t/p/w500/${data.poster_path ? data.poster_path : ""}"
+                    alt="No Photo">
+                <div class="review">
+                    <div class="review_title">
+                        <a href="/films.html?${data.id}">${data.title}<a><span>${data.release_date ? data.release_date.substr(0, 4) : ""}</span>
+                    </div>
+                    <div class="description">
+                        <p>This review may contain spoilers.</p>
+                    </div>
+                    <div class="likes">
+                        <p>${data.vote_count} like's</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        `)
+    })
+    if (item.length > 0) {
+        $('.result_title').append(`
+        <h1>FOUND AT LEAST ${item.length} MATCHES FOR "${clear}"</h1>
     `)
+    } else {
+        $('.result_title').append(`
+        <h1>NOT FOUNT RESULTS</h1>
+    `)
+        $('.result_content').append(`
+        <h1>There were no matches for your search term.</h1>
+        `)
+    }
+
 })
