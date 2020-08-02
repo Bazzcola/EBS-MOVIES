@@ -28,7 +28,7 @@ $(document).ready(async () => {
                     <div class="review_title">
                         <a href="/films.html?${data.id}">${data.title}<a><span>${data.release_date ? data.release_date.substr(0, 4) : ""}</span>
                     </div>
-                    <div class="description">
+                    <div class="description_title">
                         <p>This review may contain spoilers.</p>
                     </div>
                     <div class="likes">

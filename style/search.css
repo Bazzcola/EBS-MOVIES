@@ -279,12 +279,12 @@ ul {
   margin: 0 auto;
 }
 
-.description {
+.description_title {
   font-size: 0.82rem;
   color: #678;
 }
 
-.description p {
+.description_title p {
   color: #9ab
 }
 
@@ -343,14 +343,181 @@ ul {
 }
 
 .description a {
-  color: #678;
+  color: #9ab;
 }
 
 .description a:hover {
-  color: #9ab;
+  color: #bce;
 }
 
 .likes {
   margin-top: 40px;
   color: white;
+}
+
+.description span {
+  color: #9ab;
+}
+
+/*MEDIA*/
+@media(max-width:1080px) {
+  .navigation {
+    padding: 0 15px;
+  }
+
+  .content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .upper_footer {
+    padding: 32px 15px 0px 15px;
+  }
+
+  .nav_menu {
+    margin-left: 0px;
+  }
+
+  .nav_menu a {
+    font-size: .7rem;
+  }
+
+  .content_leftside {
+    width: 540px;
+  }
+
+  .result_title {
+    width: 540px;
+  }
+
+  .description {
+    padding: 0px 15px;
+  }
+
+}
+
+@media(max-width:920px) {
+  .content_rightside {
+    display: none;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+
+  .content_leftside {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .upper_footer {
+    display: block;
+    padding: 15px 15px 0px 15px;
+  }
+
+  .pages {
+    margin: 0 auto;
+  }
+
+  .pages li {
+    font-size: .8rem;
+  }
+
+  .media_box {
+    justify-content: center;
+    padding-top: 15px;
+  }
+
+  .lower_footer {
+    margin-top: 40px;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+@media(max-width:720px) {
+  .pages li {
+    font-size: .6rem;
+  }
+
+  .review_title {
+    overflow-wrap: break-word;
+  }
+
+  .result_title {
+    border-bottom: none;
+    width: 100%;
+  }
+
+  /*footer*/
+  .movie_box {
+    max-width: 480px;
+  }
+
+  .header_text h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: .6rem;
+  }
+}
+
+@media(max-width:560px) {
+  .links {
+    display: none;
+  }
+
+  .description {
+    font-size: .5rem;
+  }
+
+  .header {
+    height: 150px;
+  }
+
+  .navigation {
+    display: block;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+
+  .search_btn {
+    margin: 0 auto;
+  }
+
+  .search {
+    margin: 0 auto;
+  }
+
+  .content_leftside {
+    max-width: 100%;
+  }
+
+  .review_title a {
+    font-size: 1.2rem;
+  }
+
+  .review_title span {
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width:420px) {
+  .description {
+    display: none;
+  }
+
+  .footer {
+    height: 110px;
+  }
+
+  .upper_footer {
+    padding: 25px 15px 0px 15px;
+  }
 }

@@ -248,3 +248,148 @@ ul {
 .description a:hover {
     color: #bce;
 }
+
+/*MEDIA*/
+@media(max-width:1080px) {
+    .navigation {
+        padding: 0 15px;
+    }
+
+    .movie_box {
+        padding: 0px 15px;
+        max-width: 650px;
+
+    }
+
+    .description {
+        padding: 0px 15px;
+    }
+
+    .upper_footer {
+        padding: 32px 15px 0px 15px;
+    }
+}
+
+@media(max-width:920px) {
+
+    /**Footer**/
+    .upper_footer {
+        display: block;
+        padding: 15px 15px 0px 15px;
+    }
+
+    .pages {
+        margin: 0 auto;
+    }
+
+    .pages li {
+        font-size: .8rem;
+    }
+
+    .media_box {
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    .lower_footer {
+        margin-top: 40px;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+@media(max-width:720px) {
+    .pages li {
+        font-size: .6rem;
+    }
+
+    .description {
+        font-size: .6rem;
+    }
+
+    /*footer*/
+    .movie_box {
+        max-width: 480px;
+    }
+
+    .header_text h1 {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:560px) {
+    .links {
+        display: none;
+    }
+
+    .description {
+        font-size: .5rem;
+    }
+
+    .header {
+        background-image: none;
+        height: 270px;
+    }
+
+    .header_title {
+        display: none;
+    }
+
+    .header_text h1 {
+        font-size: 1.3rem;
+    }
+
+    .navigation {
+        display: block;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+
+    .search_btn {
+        margin: 0 auto;
+    }
+
+    .search {
+        margin: 0 auto;
+    }
+
+    .header_text {
+        margin-top: 90px;
+    }
+
+    .movie_box {
+        max-width: 320px;
+    }
+
+}
+
+@media(max-width:420px) {
+    .description {
+        display: none;
+    }
+
+    .media_box {
+        height: 0px;
+    }
+
+    .footer {
+        height: 110px;
+    }
+
+    .upper_footer {
+        padding: 25px 15px 0px 15px;
+    }
+
+    .movie_box {
+        max-width: 165px;
+    }
+
+    .header_text h1 {
+        font-size: 1.1rem;
+    }
+}
