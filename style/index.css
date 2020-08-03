@@ -104,6 +104,25 @@ ul {
     margin-bottom: 100px;
 }
 
+.loading {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+}
+
+.loading h1 {
+    margin: 0px;
+}
+
+.loading img {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .movie_box {
     max-width: 1000px;
     display: flex;
@@ -118,6 +137,7 @@ ul {
     height: 225px;
     border-radius: 3px;
     overflow: hidden;
+    border: 1px white solid;
 }
 
 .movie_box__item img {

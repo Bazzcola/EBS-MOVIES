@@ -207,6 +207,7 @@ ul {
     background-size: cover;
     border-radius: 4px;
     position: relative;
+    border: 1px white solid;
 }
 
 .content_banner__followers {
