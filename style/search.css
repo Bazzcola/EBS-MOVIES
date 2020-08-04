@@ -17,7 +17,8 @@ ul {
 }
 
 .container {
-  background: #14181c url(https://s.ltrbxd.com/static/img/content-bg.b4f2e697.png) 0 -1px repeat-x;
+  /* background: #14181c url(https://s.ltrbxd.com/static/img/content-bg.b4f2e697.png) 0 -1px repeat-x; */
+  background: #1D242A;
   min-height: 100vh;
 }
 
@@ -104,6 +105,41 @@ ul {
 
 .content_leftside {
   width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.search_item_box {
+  position: relative;
+  z-index: 3;
+  background: #1D242A;
+}
+
+.loading {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  top: 241px;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading h1 {
+  margin: 0px;
+  margin-top: -62px;
+  font-size: 2rem;
+}
+
+.loading img {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
 }
 
 .result_title {
@@ -164,6 +200,13 @@ ul {
   padding-top: 5px;
   padding-left: 10px;
   margin-left: 0px;
+}
+
+.result_title img {
+  position: absolute;
+  height: 300px;
+  top: 80px;
+  left: -172px;
 }
 
 .footer {
@@ -365,6 +408,10 @@ ul {
     padding: 0 15px;
   }
 
+  .loading h1 {
+    font-size: .9rem;
+  }
+
   .content {
     padding-left: 15px;
     padding-right: 15px;
@@ -468,6 +515,10 @@ ul {
 @media(max-width:560px) {
   .links {
     display: none;
+  }
+
+  .loading {
+    top: 316px;
   }
 
   .description {

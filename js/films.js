@@ -17,14 +17,12 @@ const movieItem = async () => {
         .catch(function (error) {
             console.log('error', error)
         })
-    console.log(itemMovie)
     return itemMovie
 
 }
 
 $(document).ready(async () => {
     const data = await movieItem();
-    console.log(data)
     $('.content_wrapper').append(`
                 <div class="content_leftside">
                     <div class="content_banner" style="background-image: url(https://image.tmdb.org/t/p/w500/${data.poster_path});">

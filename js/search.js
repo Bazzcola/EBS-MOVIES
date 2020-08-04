@@ -1,24 +1,15 @@
 const searchWindow = async (event) => {
     event.preventDefault();
     const x = $("#search").val();
-    // let search = window.location.search;
-    // let clearURI = decodeURI(search)
-    // const clear = clearURI.substr(1);
-    // sessionStorage.clear()
-    // sessionStorage.setItem('search', clear);
     window.location.replace(`/search.html?${x}`);
 
 };
 
 
 $(document).ready(async () => {
-    const x = $("#search").val();
     let search = window.location.search;
     let clearURI = decodeURI(search)
     const clear = clearURI.substr(1);
-    // const itemMovie = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${clear}&api_key=ad2fb2e9ab12851bd813fca1a20c373e&language=en-US&page=1&include_adult=false&page=1`);
-    // let item = itemMovie.data.results
-    // console.log(item)
     const itemMovie = await fetch(`https://api.themoviedb.org/3/search/movie?query=${clear}&api_key=ad2fb2e9ab12851bd813fca1a20c373e&language=en-US&page=1&include_adult=false&page=1`)
         .then(function (response) {
             return response.json()
@@ -29,7 +20,6 @@ $(document).ready(async () => {
         .catch(function (error) {
             console.log('error', error)
         })
-    console.log(itemMovie)
     let item = itemMovie.results
     await item.map((data) => {
         $('.search_item_box').append(`
@@ -62,5 +52,6 @@ $(document).ready(async () => {
         <h1>There were no matches for your search term.</h1>
         `)
     }
+
 
 })

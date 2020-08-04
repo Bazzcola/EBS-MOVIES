@@ -193,6 +193,33 @@ ul {
     margin: 0 auto;
 }
 
+.loading {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    bottom: 210px;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading h1 {
+    margin: 0px;
+    margin-top: -62px;
+    font-size: 2rem;
+    margin-left: 0px;
+}
+
+.loading img {
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+}
+
 .content_wrapper {
     margin-top: -190px;
     margin-bottom: 100px;
@@ -372,6 +399,10 @@ ul {
     margin-left: 70px;
 }
 
+.content_casts {
+    background-color: #14181C;
+}
+
 .content_description {
     color: #9ab;
 }
@@ -425,6 +456,7 @@ ul {
     font-family: serif;
     font-weight: normal;
     line-height: 1.6rem;
+    background: #14181C;
 }
 
 .description_text h1 {
@@ -751,8 +783,11 @@ ul {
 /*MEDIA*/
 @media(max-width:1080px) {
     .directed {
-        top: 383px;
-        right: 110px;
+        display: none;
+    }
+
+    .loading h1 {
+        margin-left: 100px;
     }
 
     .content_rightside {
@@ -812,6 +847,17 @@ ul {
 }
 
 @media(max-width:720px) {
+    .loading {
+        bottom: 273px;
+    }
+
+    .loading h1 {
+        margin: 0px;
+        margin-top: -39px;
+        font-size: 2rem;
+        margin-left: 13px;
+    }
+
     .actor_list {
         margin-bottom: 20px;
     }
@@ -839,6 +885,7 @@ ul {
 
     .content_banner {
         margin: 0 auto;
+        z-index: 3;
     }
 
     .movie_box {
@@ -878,6 +925,11 @@ ul {
 @media(max-width:560px) {
     .directed {
         display: none;
+    }
+
+    .loading {
+        top: 255px;
+        bottom: auto;
     }
 
     .content_middleside {
