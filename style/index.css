@@ -111,8 +111,6 @@ ul {
     color: white;
     position: absolute;
     bottom: -80px;
-
-    z-index: 2;
     left: 50%;
     transform: translate(-50%, -50%);
 }

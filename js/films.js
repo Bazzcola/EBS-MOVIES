@@ -23,6 +23,7 @@ const movieItem = async () => {
 
 $(document).ready(async () => {
     const data = await movieItem();
+    $('.loading').hide()
     $('.content_wrapper').append(`
                 <div class="content_leftside">
                     <div class="content_banner" style="background-image: url(https://image.tmdb.org/t/p/w500/${data.poster_path});">

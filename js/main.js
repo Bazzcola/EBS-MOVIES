@@ -19,6 +19,7 @@ const searchWindow = (event) => {
     window.location.replace(`/search.html?${x}`)
 };
 $(document).ready(async () => {
+    $('.loading').hide()
     const movieList = await Movies();
     await movieList.map((item) => {
         $('.movie_box').append(`

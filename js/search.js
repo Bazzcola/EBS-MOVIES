@@ -22,6 +22,7 @@ $(document).ready(async () => {
         })
     let item = itemMovie.results
     await item.map((data) => {
+        $('.loading').hide()
         $('.search_item_box').append(`
             <div class="search_item">
                 <img src="https://image.tmdb.org/t/p/w500/${data.poster_path ? data.poster_path : ""}"
