@@ -199,7 +199,7 @@ ul {
     font-size: 2rem;
     color: white;
     position: absolute;
-    bottom: 210px;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -207,16 +207,16 @@ ul {
 .loading h1 {
     margin: 0px;
     margin-top: -62px;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: 0px;
 }
 
 .loading img {
     position: absolute;
-    top: 48px;
+    top: 70px;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 150px;
+    width: 100px;
 }
 
 .content_wrapper {
@@ -785,10 +785,6 @@ ul {
         display: none;
     }
 
-    .loading h1 {
-        margin-left: 100px;
-    }
-
     .content_rightside {
         display: none;
     }
@@ -927,7 +923,7 @@ ul {
     }
 
     .loading {
-        top: 255px;
+        top: 167px;
         bottom: auto;
     }
 

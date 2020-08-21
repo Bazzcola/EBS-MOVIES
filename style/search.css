@@ -138,7 +138,7 @@ ul {
   top: 20px;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 200px;
+  width: 100px;
 }
 
 .result_title {

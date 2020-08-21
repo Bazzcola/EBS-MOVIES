@@ -16,6 +16,7 @@ ul {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .header {
@@ -110,7 +111,7 @@ ul {
     font-size: 2rem;
     color: white;
     position: absolute;
-    bottom: -80px;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -123,11 +124,10 @@ ul {
 
 .loading img {
     position: absolute;
-    top: 48px;
+    top: 70px;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 300px;
-    width: 100%;
+    width: 100px;
 }
 
 .movie_box {
@@ -160,6 +160,7 @@ ul {
     height: 127px;
     width: 100%;
     background: #2c3440;
+
 }
 
 .upper_footer {
@@ -399,6 +400,14 @@ ul {
 
     .loading h1 {
         font-size: 2rem;
+    }
+
+    .loading {
+        top: 113%;
+    }
+
+    .loading img {
+        top: 14px;
     }
 }
 
